@@ -1,0 +1,55 @@
+<html >
+<head>
+  <title>Predict cancer</title>
+</head>
+
+<body>
+
+<img src=
+
+"https://image.shutterstock.com/image-vector/vector-image-icon-pink-ribbon-600w-621585911.jpg"
+         alt="xxv image", width="150", height="50", style="float:left">
+
+<img src=
+"https://seeklogo.com/images/T/Teenage_Cancer_Trust-logo-E6DDA742AF-seeklogo.com.png"
+         alt="xxv image", width="200", height="70", style="float:right">
+
+<style>
+body {
+  background-image: url("https://image.shutterstock.com/image-vector/breast-cancer-awareness-month-round-260nw-725750632.jpg");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+ <div>
+	<h1>cancer prediction</h1>
+
+    <form action="{{ url_for('getprediction')}}"method="post">
+    	<input type="text" name="radius_mean " placeholder="radius_mean " required="required" />
+        <input type="text" name="perimeter_mean " placeholder="perimeter_mean " required="required" />
+        <input type="text" name="area_mean" placeholder="area_mean" required="required" />
+    	<input type="text" name="concavity_mean" placeholder="concavity_mean" required="required" />
+    	<input type="text" name="concave points_mean " placeholder="concave points_mean " required="required" />
+        <input type="text" name="radius_worst " placeholder="radius_worst " required="required" />
+        <input type="text" name=" perimeter_worst " placeholder=" perimeter_worst " required="required" />
+        <input type="text" name="area_worst " placeholder="area_worst " required="required" />
+    	<input type="text" name="concave points_worst" placeholder="concave points_worst" required="required" />
+
+
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
